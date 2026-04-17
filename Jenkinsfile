@@ -52,7 +52,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                dir('${PROJECT_DIR}'){
+                dir('jenkins-java-demo'){
                      echo ' Deploying Application...'
                      sh 'java -cp target/jenkins-java-demo-1.0-SNAPSHOT.jar com.demo.App'
                 }   
