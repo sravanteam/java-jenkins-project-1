@@ -26,8 +26,10 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo ' Running Unit Tests...'
-                sh 'mvn test'
+     		dir('jenkins-java-demo'){
+                     echo ' Running Unit Tests...'
+                     sh 'mvn test'
+                }
             }
             post {
                 always {
