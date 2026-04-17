@@ -17,8 +17,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo ' Building with Maven...'
-                sh 'mvn clean compile'
+         	dir('jenkins-java-demo') {
+                     echo ' Building with Maven...'
+                     sh 'mvn clean compile'
+                }
             }
         }
 
