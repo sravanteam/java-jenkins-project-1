@@ -43,8 +43,10 @@ pipeline {
 
         stage('Package') {
             steps {
-                echo ' Packaging into JAR...'
-                sh 'mvn package -DskipTests'
+                dir('jenkins-java-demo'){
+                         echo ' Packaging into JAR...'
+                         sh 'mvn package -DskipTests'
+                }    
             }
         }
 
